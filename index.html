@@ -1,1 +1,891 @@
-Hello World
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>MJW - Resumé</title>
+    <link rel="icon" type="image/x-icon" href="https://michaeljwickey.com/favicon.ico">
+    <!-- Many thanks to Mario S Maselli for the resume template https://codepen.io/mariosmaselli/pen/popWjr-->
+    <!-- FONTS -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:100' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+
+
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"> -->
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Varela+Round);
+        @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
+
+        *,
+        *::after,
+        *::before {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            font-family: "Open Sans", sans-serif;
+            font-size: 16px;
+            line-height: 1.5em;
+        }
+
+        a {
+            color: #66cc99;
+            text-decoration: none;
+        }
+
+        .clearfix::after,
+        .clearfix::before {
+            content: " ";
+            display: table;
+        }
+
+        .clearfix::after {
+            clear: both;
+        }
+
+        .bold {
+            color: #4a4e51;
+            font-weight: 400;
+        }
+
+        .bold2 {
+            color: #fff;
+            font-weight: 400;
+        }
+
+        .resume-wrapper {
+            position: relative;
+            text-align: center;
+            height: 100%;
+        }
+
+        .container {
+            min-height: 600px;
+        }
+
+        .profile {
+            background: #fff;
+            width: 40%;
+            float: left;
+            color: #9099a0;
+        }
+
+        @media (max-width: 850px) {
+            .profile {
+                width: 100%;
+            }
+        }
+
+        .profile .name-wrapper {
+            float: left;
+            width: 60%;
+        }
+
+        .profile h1 {
+            font-size: 2.5em;
+            text-align: left;
+            font-family: "Varela Round", sans-serif;
+            color: #4a4e51;
+            text-transform: uppercase;
+            line-height: 1em;
+            padding-top: 40px;
+        }
+
+        @media (max-width: 1200px) {
+            .profile h1 {
+                padding-top: 20px;
+            }
+        }
+
+        @media (max-width: 450px) {
+            .profile h1 {
+                font-size: 1.8em;
+                padding-top: 20px;
+            }
+        }
+
+        .profile li {
+            margin-bottom: 10px;
+        }
+
+        .profile .picture-resume-wrapper {
+            width: 40%;
+            display: block;
+            float: left;
+        }
+
+        @media (max-width: 1200px) {
+            .profile .picture-resume-wrapper {
+                width: 100%;
+            }
+        }
+
+        .profile .picture-resume {
+            width: 220px;
+            height: 220px;
+            background-size: cover;
+            border-radius: 50%;
+            margin-right: 0px;
+            display: table;
+            position: relative;
+            vertical-align: middle;
+        }
+
+        .profile .picture-resume span {
+            display: table-cell;
+            vertical-align: middle;
+            position: relative;
+            margin: 0 auto;
+            z-index: 10;
+            text-align: center;
+        }
+
+        .profile .picture-resume img {
+            border-radius: 50%;
+            width: 130px;
+        }
+
+        @media (max-width: 1500px) {
+            .profile .picture-resume img {
+                width: 80px;
+            }
+        }
+
+        @media (max-width: 1200px) {
+            .profile .picture-resume img {
+                width: 120px;
+                height: 120px;
+            }
+        }
+
+        @media (max-width: 1500px) {
+            .profile .picture-resume {
+                width: 150px;
+                height: 150px;
+            }
+        }
+
+        @media (max-width: 1200px) {
+            .profile .picture-resume {
+                width: 200px;
+                height: 200px;
+            }
+        }
+
+        @media (max-width: 450px) {
+            .profile .picture-resume {
+                width: 180px;
+                height: 180px;
+            }
+        }
+
+        .profile .contact-info {
+            margin-top: 100px;
+            font-weight: 300;
+        }
+
+        @media (max-width: 1200px) {
+            .profile .contact-info {
+                margin-top: 70px;
+            }
+        }
+
+        @media (max-width: 450px) {
+            .profile .contact-info {
+                margin-top: 50px;
+            }
+        }
+
+        .profile .list-titles {
+            float: left;
+            text-align: left;
+            font-weight: 600;
+            width: 40%;
+            color: #4a4e51;
+        }
+
+        .profile .list-content {
+            float: left;
+            width: 60%;
+            text-align: left;
+            font-weight: 300;
+        }
+
+        .profile .contact-presentation {
+            text-align: left;
+            font-weight: 300;
+            margin-top: 100px;
+            margin-bottom: 100px;
+        }
+
+        @media (max-width: 1200px) {
+            .profile .contact-presentation {
+                margin-top: 70px;
+                margin-bottom: 70px;
+            }
+        }
+
+        @media (max-width: 850px) {
+            .profile .contact-presentation {
+                margin-top: 50px;
+                margin-bottom: 50px;
+            }
+        }
+
+        .profile svg {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .profile .st0,
+        .profile .st1 {
+            fill: #66cc99;
+        }
+
+        .experience {
+            background: #3d3e42;
+            width: 60%;
+            float: left;
+            position: relative;
+            color: #9099a0;
+            font-weight: 300;
+            min-height: 100%;
+            min-height: 100vh;
+        }
+
+        @media (max-width: 850px) {
+            .experience {
+                width: 100%;
+            }
+        }
+
+        .experience h3.experience-title {
+            color: #66cc99;
+            text-align: left;
+            text-transform: uppercase;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        .experience .company-wrapper {
+            width: 30%;
+            float: left;
+            text-align: left;
+            padding-right: 5%;
+            margin-bottom: 60px;
+        }
+
+        @media (max-width: 450px) {
+            .experience .company-wrapper {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+
+        .experience .job-wrapper {
+            width: 70%;
+            float: left;
+            text-align: left;
+            padding-right: 5%;
+            margin-bottom: 60px;
+        }
+
+        @media (max-width: 450px) {
+            .experience .job-wrapper {
+                width: 100%;
+                margin-bottom: 40px;
+            }
+        }
+
+        .experience .experience-title {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .section-padding {
+            padding: 60px 60px 40px 40px;
+        }
+
+        @media (max-width: 850px) {
+            .section-padding {
+                padding: 80px 15% 40px 10%;
+            }
+        }
+
+        @media (max-width: 450px) {
+            .section-padding {
+                padding: 40px 10% 20px 5%;
+            }
+        }
+
+        .section-wrapper {
+            width: 50%;
+            float: left;
+            text-align: left;
+            color: #9099a0;
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 450px) {
+            .section-wrapper {
+                width: 100%;
+            }
+        }
+
+        .section-wrapper:nth-child(3) {
+            padding-right: 8%;
+        }
+
+        .section-wrapper h3.section-title {
+            color: #66cc99;
+            text-align: left;
+            text-transform: uppercase;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        .section-wrapper .skill-percentage {
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .section-wrapper .skill-percentage::after {
+            content: "";
+            width: 100%;
+            height: 6px;
+            background: #4a4e51;
+            display: block;
+            margin-top: 3px;
+        }
+
+        .section-wrapper .skill-percentage::before {
+            content: "";
+            height: 6px;
+            background: #66cc99;
+            position: absolute;
+            margin-top: 3px;
+            bottom: 0;
+        }
+
+        .section-wrapper .skill-percentage:nth-child(1)::before {
+            width: 80%;
+            -webkit-animation: skill_1 0.6s ease;
+            animation: skill_1 0.6s ease;
+        }
+
+        .section-wrapper .skill-percentage:nth-child(2)::before {
+            width: 90%;
+            -webkit-animation: skill_2 0.6s ease;
+            animation: skill_2 0.6s ease;
+        }
+
+        .section-wrapper .skill-percentage:nth-child(3)::before {
+            width: 30%;
+            -webkit-animation: skill_3 0.6s ease;
+            animation: skill_3 0.6s ease;
+        }
+
+        .section-wrapper .skill-percentage:nth-child(4)::before {
+            width: 50%;
+            -webkit-animation: skill_4 0.6s ease;
+            animation: skill_4 0.6s ease;
+        }
+
+        .section-wrapper .skill-percentage:nth-child(5)::before {
+            width: 40%;
+            -webkit-animation: skill_5 0.6s ease;
+            animation: skill_5 0.6s ease;
+        }
+
+        .section-wrapper .skill-percentage:nth-child(6)::before {
+            width: 40%;
+            -webkit-animation: skill_6 0.6s ease;
+            animation: skill_6 0.6s ease;
+        }
+
+        .section-wrapper .skill-percentage:nth-child(7)::before {
+            width: 40%;
+            -webkit-animation: skill_6 0.6s ease;
+            animation: skill_6 0.6s ease;
+        }
+
+        .youtube-container {
+            display: flex;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+        }
+
+        .youtube-container iframe {
+            width: 100%;
+        }
+
+        @-webkit-keyframes skill_1 {
+            from {
+                width: 0%;
+            }
+
+            to {
+                width: 80%;
+            }
+        }
+
+        @keyframes skill_1 {
+            from {
+                width: 0%;
+            }
+
+            to {
+                width: 80%;
+            }
+        }
+
+        @-webkit-keyframes skill_2 {
+            from {
+                width: 0%;
+            }
+
+            to {
+                width: 90%;
+            }
+        }
+
+        @keyframes skill_2 {
+            from {
+                width: 0%;
+            }
+
+            to {
+                width: 90%;
+            }
+        }
+
+        @-webkit-keyframes skill_3 {
+            from {
+                width: 0%;
+            }
+
+            to {
+                width: 30%;
+            }
+        }
+
+        @keyframes skill_3 {
+            from {
+                width: 0%;
+            }
+
+            to {
+                width: 30%;
+            }
+        }
+
+        @-webkit-keyframes skill_4 {
+            from {
+                width: 0%;
+            }
+
+            to {
+                width: 50%;
+            }
+        }
+
+        @keyframes skill_4 {
+            from {
+                width: 0%;
+            }
+
+            to {
+                width: 50%;
+            }
+        }
+
+        @-webkit-keyframes skill_5 {
+            from {
+                width: 0%;
+            }
+
+            to {
+                width: 40%;
+            }
+        }
+
+        @keyframes skill_5 {
+            from {
+                width: 0%;
+            }
+
+            to {
+                width: 40%;
+            }
+        }
+
+        @-webkit-keyframes skill_6 {
+            from {
+                width: 0%;
+            }
+
+            to {
+                width: 40%;
+            }
+        }
+
+        @keyframes skill_6 {
+            from {
+                width: 0%;
+            }
+
+            to {
+                width: 40%;
+            }
+        }
+
+        @-webkit-keyframes skill_7 {
+            from {
+                width: 0%;
+            }
+
+            to {
+                width: 40%;
+            }
+        }
+
+        @keyframes skill_7 {
+            from {
+                width: 0%;
+            }
+
+            to {
+                width: 40%;
+            }
+        }
+    </style>
+    <script>
+        // Some code thanks to @chrisgannon
+
+        var select = function (s) {
+            return document.querySelector(s);
+        }
+
+        function randomBetween(min, max) {
+            var number = Math.floor(Math.random() * (max - min + 1) + min);
+
+            if (number !== 0) {
+                return number;
+            } else {
+                return 0.5;
+            }
+        }
+
+        var tl = new TimelineMax();
+
+        for (var i = 0; i < 20; i++) {
+
+            var t = TweenMax.to(select('.bubble' + i), randomBetween(1, 1.5), {
+                x: randomBetween(12, 15) * (randomBetween(-1, 1)),
+                y: randomBetween(12, 15) * (randomBetween(-1, 1)),
+                repeat: -1,
+                repeatDelay: randomBetween(0.2, 0.5),
+                yoyo: true,
+                ease: Elastic.easeOut.config(1, 0.5)
+            })
+
+            tl.add(t, (i + 1) / 0.6)
+        }
+
+        tl.seek(50);
+    </script>
+
+</head>
+<html>
+
+<div class="resume-wrapper">
+    <section class="profile section-padding">
+        <div class="container">
+            <div class="picture-resume-wrapper">
+                <div class="picture-resume">
+
+                    <span><img src="https://michaeljwickey.com/static/homeinfo/images/WorkHeadshot.jpg"
+                            alt="Michael's Headshot"></span>
+                    <svg version="1.1" viewBox="0 0 350 350">
+
+                        <defs>
+                            <filter id="goo">
+                                <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur" />
+                                <feColorMatrix in="blur" mode="matrix"
+                                    values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 21 -9" result="cm" />
+                            </filter>
+                        </defs>
+
+
+                        <g filter="url(#goo)">
+
+                            <circle id="main_circle" class="st0" cx="171.5" cy="175.6" r="130" />
+
+                            <circle id="circle" class="bubble0 st1" cx="171.5" cy="175.6" r="122.7" />
+                            <circle id="circle" class="bubble1 st1" cx="171.5" cy="175.6" r="122.7" />
+                            <circle id="circle" class="bubble2 st1" cx="171.5" cy="175.6" r="122.7" />
+                            <circle id="circle" class="bubble3 st1" cx="171.5" cy="175.6" r="122.7" />
+                            <circle id="circle" class="bubble4 st1" cx="171.5" cy="175.6" r="122.7" />
+                            <circle id="circle" class="bubble5 st1" cx="171.5" cy="175.6" r="122.7" />
+                            <circle id="circle" class="bubble6 st1" cx="171.5" cy="175.6" r="122.7" />
+                            <circle id="circle" class="bubble7 st1" cx="171.5" cy="175.6" r="122.7" />
+                            <circle id="circle" class="bubble8 st1" cx="171.5" cy="175.6" r="122.7" />
+                            <circle id="circle" class="bubble9 st1" cx="171.5" cy="175.6" r="122.7" />
+                            <circle id="circle" class="bubble10 st1" cx="171.5" cy="175.6" r="122.7" />
+
+                        </g>
+                    </svg>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="name-wrapper">
+                <h1>Michael <br />Wickey</h1><!-- YOUR NAME AND LAST NAME  -->
+            </div>
+            <div class="clearfix"></div>
+            <div class="contact-info clearfix">
+                <ul class="list-titles">
+                    <li>Call</li>
+                    <li>Mail</li>
+                    <li>Web</li>
+                    <li>Home</li>
+                </ul>
+                <ul class="list-content ">
+                    <li>+1 404 858 2928</li> <!-- YOUR PHONE NUMBER  -->
+                    <li>wickeym@gmail.com</li> <!-- YOUR EMAIL -->
+                    <li><a href="#">michaeljwickey.com</a></li> <!-- YOUR WEBSITE  -->
+                    <li>Burr Oak, MI</li> <!-- YOUR STATE AND COUNTRY  -->
+                </ul>
+            </div>
+            <div class="contact-presentation"> <!-- YOUR PRESENTATION RESUME  -->
+                <p><span class="bold">Dedicated</span> Full Stack Engineer with a passion for continuous learning
+                    and software development.
+                    Seeking to leverage my 12-year work experience to contribute to dynamic projects requiring a
+                    versatile skill set. </p>
+            </div>
+            <div class="contact-social clearfix">
+                <ul class="list-titles">
+                    <li>github</li>
+                    <li>LinkedIn</li>
+                    <li>YouTube</li>
+                    <li>Blog</li>
+                </ul>
+                <ul class="list-content"> <!-- REMEMBER TO PUT THE URL ON THE HREF TAG  -->
+                    <li><a href="https://github.com/wickeym" target="_blank">@wickeym</a></li>
+                    <!-- YOUR TWITTER USER  -->
+                    <li><a href="https://www.linkedin.com/in/michael-wickey/" target="_blank">michael-wickey</a></li>
+                    <!-- YOUR DRIBBBLE USER  -->
+                    <li><a href="https://www.youtube.com/@wickeym" target="_blank">@wickeym</a></li>
+                    <li><a href="https://blog.michaeljwickey.com/" target="_blank">blog.michaeljwickey.com</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="experience section-padding">
+        <div class="container">
+            <h3 class="experience-title">Experience</h3>
+
+            <div class="experience-wrapper">
+                <div class="company-wrapper clearfix">
+                    <div class="experience-title">WickeyWare LLC</div> <!-- NAME OF THE COMPANY YOUWORK WITH  -->
+                    <div class="time">2013 - Present</div> <!-- THE TIME YOU WORK WITH THE COMPANY  -->
+                </div>
+
+                <div class="job-wrapper clearfix">
+                    <div class="experience-title">Full Stack Engineer </div> <!-- JOB TITLE  -->
+                    <div class="company-description">
+                        <p>Dedicated Full Stack Engineer. I have designed and create numerous Django
+                            backends with all of them utilizing Celery, Redis, and MySQL.
+                        </p> <!-- JOB DESCRIPTION  -->
+                    </div>
+                </div>
+
+                <div class="company-wrapper clearfix">
+                    <div class="experience-title">Brandenburg GmbH Paderborn, Germany</div>
+                    <!-- NAME OF THE COMPANY YOUWORK WITH  -->
+                    <div class="time">June 2012 - August 2012</div> <!-- THE TIME YOU WORK WITH THE COMPANY  -->
+                </div>
+
+                <div class="job-wrapper clearfix">
+                    <div class="experience-title">Internship Software Developer</div> <!-- JOB TITLE  -->
+                    <div class="company-description">
+                        <p>Worked with XSLT transformations to extract comments from code to generate documentation
+                            using Doxygen. Brandenburg GmbH, located in Paderborn, Germany, is the company behind
+                            LucidShape and LucidDrive, which is used to aid auto manufactures in automotive lighting.
+                        </p> <!-- JOB DESCRIPTION  -->
+                    </div>
+                </div>
+
+            </div><!--Skill experience-->
+
+            <h3 class="experience-title">Projects @ WickeyWare</h3>
+            <div class="experience-wrapper">
+                <div class="company-wrapper clearfix">
+                    <div class="experience-title">StatStory Ad Manager</div> <!-- NAME OF THE COMPANY YOUWORK WITH  -->
+                    <div class="time">2022 - Present</div> <!-- THE TIME YOU WORK WITH THE COMPANY  -->
+                </div>
+
+                <div class="job-wrapper clearfix">
+                    <div class="experience-title">iOS/Android App & Python/Django Backend</div> <!-- JOB TITLE  -->
+                    <div class="company-description">
+                        <p>Developed an iOS and Android app using Solar2D that enabled users to promote YouTube videos
+                            as Google video ads. These ads can be shown as in-stream and in-feed ads on YouTube as well
+                            as Google's Video Partner Network.<br>
+                            Designed and implemented a robust Django REST API backend, facilitating seamless order
+                            processing between the server and Google Ads accounts.</p> <!-- JOB DESCRIPTION  -->
+                    </div>
+                </div>
+
+                <div class="company-wrapper clearfix">
+                    <div class="experience-title">Burst! Arrow Flick</div> <!-- NAME OF THE COMPANY YOUWORK WITH  -->
+                    <div class="time">2021 - 2022</div> <!-- THE TIME YOU WORK WITH THE COMPANY  -->
+                </div>
+
+                <div class="job-wrapper clearfix">
+                    <div class="experience-title">iOS/Android App & Python/Django Backend</div> <!-- JOB TITLE  -->
+                    <div class="company-description">
+                        <p>Burst was orginally developed in 2011 specifically for the iPhone, but after years of no
+                            updates Apple finally unlisted it. Ten years later I re-created the <a
+                                href="https://apps.apple.com/us/app/burst-arrow-flick/id447179636"
+                                target="_blank"></a>app in Solar2D using our
+                            in-house game engine.</p> <!-- JOB DESCRIPTION  -->
+                    </div>
+                </div>
+
+                <!-- <div class="company-wrapper clearfix">
+                    <div class="experience-title">WickeyGames API</div>
+                    <div class="time">2021 - current</div>
+                </div>
+
+                <div class="job-wrapper clearfix">
+                    <div class="experience-title">Python/Django Backend</div>
+                    <div class="company-description">
+                        <p>Designed and developed a Django REST API to handle all of our games at WickeyWare. The
+                            backend creates and handles the user profile as well as allows games to save state on the
+                            server. It is also responsible for global game state, as well as verifying
+                            and storing purchases for iOS and Android.</p>
+                    </div>
+                </div> -->
+
+                <div class="company-wrapper clearfix">
+                    <div class="experience-title">WickeyAppStore</div> <!-- NAME OF THE COMPANY YOUWORK WITH  -->
+                    <div class="time">2017 - 2021</div> <!-- THE TIME YOU WORK WITH THE COMPANY  -->
+                </div>
+
+                <div class="job-wrapper clearfix">
+                    <div class="experience-title">Progressive Web App & Python/Django Backend</div> <!-- JOB TITLE  -->
+                    <div class="company-description">
+                        <p>Led the development of a Progressive Web App (PWA) with capabilities resembling traditional
+                            app stores, including single sign-on, in-app purchases, reviews, and search functionality.
+                            <a href="https://github.com/wickeyware/wickeyappstore" target="_blank">Github</a><br>
+                            Developed a Node.js server for server-side rendering of <a
+                                href="https://wickeyappstore.com/" target="_blank">WickeyAppStore</a>.<br>
+                            Constructed the Django backend for APIs to facilitate user accounts, email verification,
+                            purchasing, reviews, favorites, etc. and implemented periodic tasks using Celery.
+                            <br>Created infrastructure on AWS to host new webapps as a subdomain on our
+                            wickeyappstore.com domain as well as implemented all of the needed AWS APIS to handle this
+                            process seamlessly.
+                        </p>
+                        <!-- JOB DESCRIPTION  -->
+                    </div>
+                </div>
+
+                <div class="company-wrapper clearfix">
+                    <div class="experience-title">Mines of Mars</div> <!-- NAME OF THE COMPANY YOUWORK WITH  -->
+                    <div class="time">2014 - present</div> <!-- THE TIME YOU WORK WITH THE COMPANY  -->
+                </div>
+
+                <div class="job-wrapper clearfix">
+                    <div class="experience-title">iOS/Android App & Python/Django Backend</div> <!-- JOB TITLE  -->
+                    <div class="company-description">
+                        <p>Mines of Mars was orginally released in 2014 for <a
+                                href="https://apps.apple.com/us/app/mines-of-mars/id670407610" target="_blank">iOS</a>
+                            and <a href="https://play.google.com/store/apps/details?id=com.wickeyware.minesofmars"
+                                target="_blank">Android</a> using the Solor2D SDK. I added controller support to the
+                            game. I helped to port it
+                            to <a href="https://store.steampowered.com/app/413740/Mines_of_Mars/"
+                                target="_blank">Steam</a>. I also helped port it to our new in house game engine. I
+                            created the API backend in Django that provides for a total user base of over <span
+                                style="font-weight: bolder; font-style: italic; color: white;">1.3
+                                million</span>.
+                        </p> <!-- JOB DESCRIPTION  -->
+                    </div>
+                </div>
+
+                <div class="company-wrapper clearfix">
+                    <div class="experience-title">InstaLiker</div> <!-- NAME OF THE COMPANY YOUWORK WITH  -->
+                    <div class="time">2013 - 2014</div> <!-- THE TIME YOU WORK WITH THE COMPANY  -->
+                </div>
+
+                <div class="job-wrapper clearfix">
+                    <div class="experience-title">Mobile X Labs (now called Mode Mobile) contractor: Python/Django
+                        Backend
+                    </div> <!-- JOB TITLE  -->
+                    <div class="company-description">
+                        <p>Engineered a horizontally scalable API backend on RackSpace using Apache, Django, and MySQL
+                            for an Instagram Like trading app. Successfully managed high traffic, handling multiple
+                            thousands of requests per minute at peak popularity.</p> <!-- JOB DESCRIPTION  -->
+                    </div>
+                </div>
+            </div><!--Projects-->
+
+            <div class="section-wrapper clearfix" style="padding-right: 10px;">
+                <h3 class="section-title">Skills</h3> <!-- YOUR SET OF SKILLS  -->
+                <ul>
+                    <li class="skill-percentage">Apache Server, Linux</li>
+                    <li class="skill-percentage">Python, Django, MySQL, Celery, Redis [10 years]</li>
+                    <li class="skill-percentage">HTML / HTML5 / CSS</li>
+                    <li class="skill-percentage">JavaScript</li>
+                    <li class="skill-percentage">TypeScript, Angular</li>
+                    <li class="skill-percentage">AWS</li>
+
+                </ul>
+
+            </div>
+
+            <div class="section-wrapper clearfix" style="padding-left: 10px;">
+                <h3 class="section-title">Hobbies</h3> <!-- DESCRIPTION OF YOUR HOBBIES -->
+                <p><span class="bold2">Volunteering/Programming</span> I regularly volunteer at my church. The
+                    person who puts together the worship section (verse readings, and songs) also creates a powerpoint.
+                    He is not a techy person. The church had folder full of ppts with the songs edited to how we always
+                    sing them and he needed to search the folder and copy them into a new ppt. So, I extracted all of
+                    those ppts and put them into a mysql database and created a webapp that would lookup songs and put
+                    them into a ppt with the click of a button. He loved it! You can check it out here,
+                    and even try it out if you want: <a href="https://lockwood.michaeljwickey.com/"
+                        target="_blank">lockwood.michaeljwickey.com</a>
+                    <br><br>
+                    <hr>
+                    <br>
+                <p><span class="bold2">Videography</span> I like documenting the vacations my wife and I take. Here is
+                    an
+                    example of the last one:
+                <div class="youtube-container">
+                    <iframe src="https://www.youtube.com/embed/X9RO1Gr0j9c?si=I-S7_cZbSKUusPG4" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+
+                </div>
+                <!-- <a href="https://youtu.be/X9RO1Gr0j9c" target="_blank">A trip to Germany 2023</a> -->
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="clearfix"></div>
+</div>
+
+</html>
